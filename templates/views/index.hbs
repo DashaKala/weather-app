@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Weather application</title>
+        <link rel="icon" href="/img/weather.png">
+        <!-- ref is relative; in express.static we declare the root directory (dir "public") -->
+        <link rel="stylesheet" href="/css/styles.css">
+
+    </head>
+    <body>
+        <div class="main-content">
+            <!-- insert partials: must use ">" -->
+            {{>header}}
+            <p>Use this site to get your forecast</p>
+            <form>
+                <input type="text" placeholder="Location">
+                <button>Search</button>
+            </form>
+            <p id="message-1"></p>
+            <p id="message-2"></p>
+        </div>
+
+        <!-- we insert properties of object declared in render method -->
+        <!-- <p>Created by: {{name}}</p> -->
+        {{>footer}}
+
+        <script src="/js/app.js"></script>
+
+    </body>
+</html>
